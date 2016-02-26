@@ -137,7 +137,7 @@ func (a *SyslogAdapter) retryTemporary(buf []byte) error {
 	}, 11)
 
 	if err != nil {
-		log.Println("syslog: retry failed")
+		log.Fatalln("syslog: retry failed")
 		return err
 	}
 
@@ -157,7 +157,7 @@ func (a *SyslogAdapter) reconnect() error {
 	}, 11)
 
 	if err != nil {
-		log.Println("syslog: reconnect failed")
+		log.Fatalln("syslog: reconnect failed")
 		return err
 	}
 
